@@ -1,0 +1,120 @@
+.futuresTable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+
+  &-matrix {
+    color: $color-green;
+  }
+  &-dark {
+    color: $color-white;
+  }
+  &-space {
+    color: $color-white;
+  }
+  &-light {
+    color: $color-purple;
+  }
+
+  &__table {
+    @include tableRow;
+  }
+
+  &__content {
+    width: 100%;
+    overflow-y: auto;
+    height: 30rem;
+    border: 1px solid $color-table;
+  }
+
+  &__checkbox {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 2rem;
+    opacity: 0.8;
+
+    @include respond(sm-laptop) {
+      margin-left: 1.5rem;
+    }
+
+    @include respond(tab-port) {
+      margin-left: 0rem;
+    }
+  }
+
+  &--rocketIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &--rocketContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  td {
+    padding: 1.5rem;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-align: center;
+    border: none;
+
+    &:first-of-type {
+      width: 5rem;
+
+      @include respond(sm-laptop) {
+        width: 4rem;
+      }
+
+      @include respond(tab-land) {
+        width: 3rem;
+      }
+
+      @include respond(tab-port) {
+        width: 2rem;
+      }
+
+      @include respond(phone) {
+        width: 1rem;
+      }
+    }
+
+    @include respond(sm-laptop) {
+      font-size: 1rem;
+    }
+
+    @include respond(sm-laptop) {
+      font-size: 1rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 0.9rem;
+    }
+  }
+
+  tbody {
+    tr {
+      position: relative;
+      cursor: pointer;
+
+      transition: all 0.2s;
+      &:hover {
+        background-color: $color-table;
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+  ::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+}

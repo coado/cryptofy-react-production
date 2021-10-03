@@ -1,0 +1,51 @@
+.label {
+  width: 45rem;
+  height: 10rem;
+  font-size: 2rem;
+  display: flex;
+  color: $color-white;
+  border-radius: 3px;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: absolute;
+  top: 2rem;
+  z-index: 1000;
+  transition: all 0.2s;
+
+  @include respond(sm-laptop) {
+    width: 38rem;
+    height: 8rem;
+    top: 6rem;
+  }
+
+  @include respond(tab-port) {
+    width: 30rem;
+    height: 8rem;
+    top: 10rem;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__error {
+    background-color: $color-red-transparent;
+
+    &:hover {
+      box-shadow: $shadow;
+      transform: scale(1.02);
+      background-color: $color-red;
+    }
+  }
+
+  &__success {
+    background-color: $color-green-transparent;
+
+    &:hover {
+      box-shadow: $shadow;
+      transform: scale(1.02);
+      background-color: $color-green;
+    }
+  }
+}

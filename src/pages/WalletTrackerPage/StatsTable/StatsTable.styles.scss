@@ -1,0 +1,21 @@
+.statsTable {
+  font-size: 1.5rem;
+  color: inherit;
+  text-align: center;
+
+  th {
+    padding: 2rem;
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+  }
+
+  td {
+    padding: 1rem;
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}

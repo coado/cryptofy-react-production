@@ -1,0 +1,57 @@
+.tableHeader {
+  width: 100%;
+  background-color: $color-table;
+
+  &-space,
+  &-dark {
+    border: 1px solid $color-table;
+  }
+  &-matrix {
+    border: 1px solid $color-green;
+  }
+  &-light {
+    border: 1px solid $color-purple;
+  }
+
+  &__table {
+    width: 100%;
+    table-layout: fixed;
+    overflow: hidden;
+    border-collapse: collapse;
+  }
+
+  th {
+    padding: 2rem 1.5rem;
+    text-align: left;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:first-of-type {
+      width: 5rem;
+
+      @include respond(sm-laptop) {
+        width: 3rem;
+      }
+
+      @include respond(tab-land) {
+        width: 3.5rem;
+      }
+    }
+
+    @include respond(tab-land) {
+      padding: 2rem 1rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 1rem;
+      padding: 2rem 0.5rem;
+    }
+
+    @include respond(phone) {
+      font-size: 0.8rem;
+      // padding: 2rem 0.5rem;
+    }
+  }
+}

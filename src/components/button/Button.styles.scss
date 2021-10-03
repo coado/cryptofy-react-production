@@ -1,0 +1,58 @@
+.button {
+  background-color: transparent;
+  color: $color-light;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+  margin-left: 2rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  @include respond(tab-port) {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.7rem;
+  }
+
+  &:hover {
+    box-shadow: $shadow;
+    transform: translateY(-0.5rem);
+    // padding: 1rem 3rem;
+    background-color: $color-light;
+  }
+
+  &:active {
+    transform: translateY(-0.3rem);
+  }
+
+  &-dark {
+    border: 2px solid $color-table;
+    &:hover {
+      color: $color-dark;
+    }
+  }
+
+  &-space {
+    border: 2px solid $color-table;
+    &:hover {
+      color: $color-space;
+    }
+  }
+
+  &-matrix {
+    border: 2px solid $color-green;
+    color: $color-green;
+    &:hover {
+      background-color: $color-green;
+      color: $color-dark;
+    }
+  }
+
+  &-light {
+    color: $color-purple;
+    border: 2px solid $color-purple;
+    &:hover {
+      background-color: $color-purple;
+      color: $color-white;
+    }
+  }
+}

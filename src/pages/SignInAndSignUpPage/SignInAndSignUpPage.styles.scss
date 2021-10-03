@@ -1,0 +1,163 @@
+.sign {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //background-color: red;
+  background-image: $space-background;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+
+  &__spinnerWrapper {
+    position: absolute;
+    top: -5rem;
+
+    @include respond(tab-port) {
+      top: 2rem;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+    // height: 50rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      margin-top: 15rem;
+    }
+  }
+
+  &__container {
+    width: 38rem;
+    height: 50rem;
+    margin: 5rem;
+    // margin: 10rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba($color-light, 0.3);
+    border-radius: 1rem;
+    box-shadow: $shadow;
+
+    @include respond(tab-port) {
+      width: 35rem;
+      height: auto;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__header {
+    font-size: 3.5rem;
+    color: $color-white;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    margin-top: 3rem;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 90%;
+
+    &:first-of-type {
+      margin-top: 4rem;
+    }
+  }
+
+  &__input {
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rgba($color-white, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 85%;
+    display: block;
+    align-self: center;
+    transition: all 0.2s;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      border-bottom: 3px solid $color-green;
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid $color-red;
+    }
+  }
+
+  &__label {
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 1rem;
+    transform: translateY(-8rem);
+    transition: all 0.3s;
+  }
+
+  &__forgot {
+    font-size: 1.5rem;
+    color: $color-white;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(1.1) translateY(0.3rem);
+    }
+  }
+
+  &__button {
+    font-size: 1.8rem;
+    border-radius: 4rem;
+    padding: 1rem 4.5rem;
+    border: none;
+    margin: 3rem 0;
+    background-color: $color-white;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: $shadow;
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+  }
+
+  &__button:last-of-type {
+    @include respond(tab-port) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.sign__input:placeholder-shown ~ .sign__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}

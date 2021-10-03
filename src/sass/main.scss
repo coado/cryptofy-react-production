@@ -1,0 +1,53 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'base/base';
+
+///////////////////////////////////////////////////////////// COMPONENTS
+
+@import '../components/Button/Button.styles.scss';
+@import '../components/AlertWindow/AlertWindow.styles.scss';
+@import '../components/LineChart/LineChart.styles.scss';
+@import '../components/PolarChart/PolarChart.styles.scss';
+@import '../components/Header/Header.styles.scss';
+@import '../components/Label/Label.styles.scss';
+@import '../components/Spinner/Spinner.styles.scss';
+@import '../components/Version/Version.styles.scss';
+@import '../components/Close/Close.styles.scss';
+@import '../components/TableHeader/TableHeader.styles.scss';
+
+///////////////////////////////////////////////////////////// PAGES
+
+// Error PagespotTable
+@import '../pages/ErrorPage/ErrorPage.styles.scss';
+
+// SignInAndSignUp Page
+@import '../pages/SignInAndSignUpPage/SignInAndSignUpPage.styles.scss';
+
+// WalletTrackerPage
+@import '../pages/WalletTrackerPage/WalletTrackerPage.styles.scss';
+@import '../pages/WalletTrackerPage/Futures/Form/FuturesForm.styles.scss';
+@import '../pages/WalletTrackerPage/Spot/Form/SpotForm.styles.scss';
+@import '../pages/WalletTrackerPage/StatisticCard/StatisticCard.styles.scss';
+@import '../pages/WalletTrackerPage/ChartContainer/ChartContainer.styles.scss';
+@import '../pages/WalletTrackerPage/StatsTable/StatsTable.styles.scss';
+@import '../pages/WalletTrackerPage/Futures/Table/FuturesTable.styles.scss';
+@import '../pages/WalletTrackerPage/Spot/Table/SpotTable.styles.scss';
+
+// Add Record Page
+@import '../pages/AddRecordPage/AddRecordPage.styles.scss';
+@import '../pages/AddRecordPage/AddRecordForm/AddRecordForm.styles.scss';
+@import '../pages/AddRecordPage/EditRecordForm/EditRecordForm.styles.scss';
+@import '../pages/AddRecordPage/Table/Table.styles.scss';
+
+// Dashboard
+@import '../pages/Dashboard/Dashboard.styles.scss';
+
+// Homepage
+@import '../pages/HomePage/HomePage.styles.scss';
+
+// NotDoundPage
+@import '../pages/NotFoundPage/NotFoundPage.styles.scss';
+
+// Suspense page
+@import '../pages/SuspensePage/SuspensePage.styles.scss';

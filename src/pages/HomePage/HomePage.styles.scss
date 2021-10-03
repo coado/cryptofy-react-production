@@ -1,0 +1,156 @@
+.Homepage {
+  background-image: $space-background;
+  min-height: 100vh;
+  width: 100vw;
+  position: absolute;
+  font-family: 'Josefin Sans', sans-serif;
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 13rem;
+
+    @include respond(sm-laptop) {
+      flex-direction: column;
+    }
+  }
+
+  &__textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    // height: 40rem;
+    text-align: center;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    transform: translateX(3rem);
+
+    &--imageWrapper {
+      perspective: 100rem;
+
+      img {
+        width: 10rem;
+        height: 10rem;
+        animation: rolling 2.5s ease-out 1s infinite;
+
+        @include respond(phone) {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+    }
+  }
+
+  &__title {
+    color: white;
+    font-size: 8.5rem;
+    letter-spacing: 0.2rem;
+    text-shadow: 4px 4px 8px #000;
+
+    @include respond(tab-port) {
+      font-size: 7rem;
+    }
+
+    @include respond(phone) {
+      font-size: 6rem;
+    }
+  }
+
+  &__slogan {
+    color: $color-white;
+    font-size: 7.5rem;
+    margin-top: 3rem;
+
+    @include respond(tab-port) {
+      font-size: 6rem;
+    }
+
+    @include respond(phone) {
+      font-size: 5rem;
+      line-height: 6.5rem;
+    }
+  }
+
+  &__button {
+    color: $color-white;
+    font-size: 1.8rem;
+    background-color: orange;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 8rem;
+    border-radius: 1rem;
+    border: none;
+    text-decoration: none;
+    position: relative;
+    // letter-spacing: 0.2rem;
+    overflow: hidden;
+    padding: 1.5rem 3rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:after {
+      background: #fff;
+      content: '';
+      height: 13rem;
+      left: -5rem;
+      opacity: 0.5;
+      position: absolute;
+      top: -4.5rem;
+      transform: rotate(35deg);
+      transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+      width: 3rem;
+    }
+
+    &:active {
+      transform: translateY(-0.3rem);
+    }
+  }
+
+  &__button:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: $shadow;
+
+    &:after {
+      left: 120%;
+      transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  &__chartContainer {
+    perspective: 100rem;
+  }
+
+  &__chartWrapper {
+    height: 30rem;
+  }
+
+  &__chart {
+    width: 65rem;
+    height: 40rem;
+    border-radius: 1rem;
+    border: 0.3rem solid orange;
+    box-shadow: 18px 6px 15px rgba($color-black, 0.5);
+    // box-shadow: inset 18px 6px 15px rgba($color-black, .5);
+    transform: rotateY(-30deg);
+    margin-right: 5rem;
+
+    @include respond(sm-laptop) {
+      display: none;
+    }
+  }
+}
+
+@keyframes rolling {
+  0% {
+    transform: rotateY(0);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}

@@ -1,0 +1,18 @@
+.suspense {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: $space-background;
+
+  &__dark {
+    background: $dark-background;
+  }
+
+  &__matrix {
+    background: $matrix-background;
+  }
+
+  &__light {
+    background: $light-background;
+  }
+}

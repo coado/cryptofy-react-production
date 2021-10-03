@@ -1,0 +1,12 @@
+.version {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1000000;
+
+  h2 {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.623);
+    font-family: 'Josefin Sans', sans-serif;
+  }
+}

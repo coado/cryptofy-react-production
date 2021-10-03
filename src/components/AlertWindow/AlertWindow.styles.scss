@@ -1,0 +1,36 @@
+.alertWindow {
+  @include blurEffect;
+
+  &__container {
+    width: 50rem;
+    height: 30rem;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba($color-light, 0.3);
+    box-shadow: $shadow;
+    border-radius: 0.5rem;
+    padding: 3rem;
+  }
+
+  &__text {
+    font-size: 2rem;
+    color: $color-white;
+    text-align: center;
+    font-family: $font;
+    font-weight: 500;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+
+    &:last-of-type {
+      margin-left: 3rem;
+    }
+  }
+}

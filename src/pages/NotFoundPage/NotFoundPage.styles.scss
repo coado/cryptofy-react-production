@@ -1,0 +1,33 @@
+.notFoundPage {
+  width: 100%;
+  height: 100vh;
+  background: $space-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__textWrapper {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__404 {
+    font-size: 15rem;
+    font-weight: 700;
+    color: $color-black;
+  }
+
+  &__header {
+    font-size: 4rem;
+    color: $color-white;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    font-size: 2rem;
+    color: white;
+  }
+}

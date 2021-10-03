@@ -1,0 +1,560 @@
+.dashboard {
+  width: 100%;
+  //background-image: linear-gradient(to bottom, #845ec2, #b45cb6, #d65fa5, #ed6993, #fa7a82, #ff8977, #ff9a6e, #ffac69, #ffbe66, #ffd166, #ffe469, #f9f871);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-dark {
+    background-image: $dark-background;
+    color: $color-white;
+  }
+
+  &-space {
+    background-image: $space-background;
+    color: $color-white;
+  }
+
+  &-matrix {
+    background: $matrix-background;
+    color: $color-green;
+  }
+
+  &-light {
+    background: $light-background;
+    color: $color-purple;
+  }
+
+  &__cardContainer {
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+
+    @include respond(tab-land) {
+      flex-direction: column;
+      align-items: center;
+    }
+    // background-image: $background--2
+  }
+
+  &__card {
+    width: 40rem;
+    height: 15rem;
+    border-radius: 0.5rem;
+    margin-top: 8rem;
+    box-shadow: $shadow;
+    transition: all 0.2s;
+
+    @include respond(sm-laptop) {
+      width: 35rem;
+    }
+
+    @include respond(tab-land) {
+      width: 60rem;
+      margin-top: 12rem;
+    }
+
+    @include respond(tab-port) {
+      width: 50rem;
+    }
+
+    @include respond(phone) {
+      width: 40rem;
+      margin-top: 8rem;
+    }
+
+    &--header {
+      color: inherit;
+      margin-top: 1rem;
+      font-size: 2rem;
+      text-align: center;
+      text-transform: uppercase;
+
+      @include respond(sm-laptop) {
+        font-size: 1.9rem;
+      }
+    }
+
+    &--container {
+      perspective: 100rem;
+    }
+
+    &--value {
+      margin-bottom: 4rem;
+      font-size: 4.5rem;
+      text-transform: uppercase;
+      color: inherit;
+      z-index: 100;
+
+      &-up-space,
+      &-up-dark {
+        color: $color-green;
+      }
+
+      &-down-space,
+      &-down-dark {
+        color: $color-red;
+      }
+
+      &-down-matrix {
+        color: $color-green;
+      }
+
+      &-up-matrix {
+        color: $color-green;
+      }
+
+      &-up-light {
+        color: $color-purple;
+      }
+
+      &-down-light {
+        color: $color-purple;
+      }
+
+      @include respond(sm-laptop) {
+        font-size: 4.5rem;
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+
+  &__percentageWalletChange {
+    display: flex;
+
+    @include respond(phone) {
+      margin-top: 12rem;
+    }
+
+    &:hover {
+      transform: rotateY(30deg);
+      box-shadow: -18px 6px 15px rgba($color-black, 0.5);
+    }
+
+    &--cardLeft {
+      height: 100%;
+      width: 25%;
+      // background-color: $color-red;
+      border-radius: 0.5rem 0 0 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-up-space,
+      &-up-dark {
+        background-color: $color-green;
+      }
+
+      &-down-space,
+      &-down-dark {
+        background-color: $color-red;
+      }
+
+      &-up-matrix {
+        background-color: $color-green;
+      }
+
+      &-down-matrix {
+        background-color: $color-green;
+      }
+
+      &-up-light {
+        background-color: $color-purple;
+      }
+
+      &-down-light {
+        background-color: $color-purple;
+      }
+    }
+
+    &--chart {
+      width: 4.5rem;
+      height: 4.5rem;
+      fill: $color-black;
+
+      @include respond(sm-laptop) {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
+    &--text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+    }
+  }
+
+  &__walletValue {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    // position: relative;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-2rem);
+    }
+
+    &--cash {
+      position: absolute;
+      width: 15rem;
+      height: 15rem;
+      fill: rgba($color-white, 0.2);
+    }
+  }
+
+  &__usdWalletChange {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      transform: rotateY(-30deg);
+      box-shadow: 18px 6px 15px rgba($color-black, 0.5);
+    }
+
+    &--cardRight {
+      height: 100%;
+      width: 25%;
+      // background-color: $color-green;
+      border-radius: 0 0.5rem 0.5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-up-space,
+      &-up-dark {
+        background-color: $color-green;
+      }
+
+      &-down-space,
+      &-down-dark {
+        background-color: $color-red;
+      }
+
+      &-up-matrix {
+        background-color: $color-green;
+      }
+
+      &-down-matrix {
+        background-color: $color-green;
+      }
+
+      &-up-light {
+        background-color: $color-purple;
+      }
+      &-down-light {
+        background-color: $color-purple;
+      }
+    }
+
+    &--chart {
+      width: 4.5rem;
+      height: 4.5rem;
+      fill: $color-black;
+
+      @include respond(sm-laptop) {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
+    &--text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      height: 100%;
+    }
+  }
+
+  &__walletAndChart {
+    width: 90%;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    @include respond(tab-land) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include respond(phone) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__cashProfits {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 1.5rem;
+  }
+
+  &__wallet {
+    width: 52%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    @include respond(tab-land) {
+      width: 70%;
+      margin-top: 5rem;
+    }
+
+    @include respond(tab-port) {
+      width: 94%;
+    }
+
+    @include respond(phone) {
+      // margin-top: 20rem;
+    }
+
+    &--header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: inherit;
+      width: 100%;
+    }
+
+    &--walletWrapper {
+      display: flex;
+      align-items: center;
+
+      h1 {
+        font-size: 2rem;
+
+        @include respond(tab-port) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    &--wallet {
+      height: 4rem;
+      width: 4rem;
+      margin-left: 1rem;
+      fill: $color-white;
+
+      @include respond(tab-port) {
+        height: 3rem;
+        width: 3rem;
+      }
+    }
+
+    &--recalcWrapper {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover .dashboard__wallet--recalcIcon {
+        transform: rotate(-360deg);
+      }
+    }
+
+    &--recalcIcon {
+      height: 2rem;
+      fill: $color-white;
+      transition: all ease-out 0.4s;
+
+      @include respond(tab-port) {
+        height: 1.5rem;
+      }
+    }
+
+    &--recalcSpan {
+      font-size: 1.5rem;
+
+      @include respond(tab-port) {
+        font-size: 1.2rem;
+      }
+    }
+
+    &--tableHeader {
+      width: 100%;
+      background-color: $color-table;
+
+      &-space,
+      &-dark {
+        border: 1px solid $color-table;
+      }
+      &-matrix {
+        border: 1px solid $color-green;
+      }
+      &-light {
+        border: 1px solid $color-purple;
+      }
+    }
+
+    &--container {
+      width: 100%;
+      height: 20%;
+      margin-top: 2rem;
+    }
+
+    &--content {
+      width: 100%;
+      overflow-y: auto;
+      height: 25rem;
+      margin-bottom: 5rem;
+      //border: 1px solid $color-table;
+    }
+
+    &--table {
+      @include tableRow;
+    }
+
+    span {
+      font-family: inherit;
+      font-weight: 600;
+      padding-left: 0.5rem;
+    }
+
+    &--percentageSpanPlus {
+      color: $color-green;
+    }
+
+    &--percentageSpanMinus {
+      color: $color-red;
+    }
+
+    th {
+      padding: 1.5rem 1rem;
+      text-align: left;
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: inherit;
+      text-transform: uppercase;
+      text-align: center;
+
+      @include respond(tab-port) {
+        font-size: 1rem;
+      }
+
+      @include respond(phone) {
+        font-size: 0.9rem;
+      }
+    }
+
+    td {
+      padding: 1.8rem 1rem;
+      text-align: left;
+      vertical-align: middle;
+      font-weight: 400;
+      font-size: 1.2rem;
+      color: inherit;
+      text-align: center;
+      border: none;
+
+      div {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @include respond(tab-port) {
+        font-size: 1.1rem;
+      }
+
+      @include respond(phone) {
+        font-size: 1rem;
+      }
+    }
+
+    tbody {
+      tr {
+        position: relative;
+        transition: all 0.2s;
+        &:hover {
+          background-color: $color-table;
+          transform: scale(1.02);
+        }
+      }
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+    ::-webkit-scrollbar-thumb {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__lineChart {
+    width: 45%;
+    height: 100%;
+
+    @include respond(tab-land) {
+      width: 70%;
+    }
+
+    @include respond(tab-port) {
+      width: 85%;
+    }
+
+    &--text {
+      color: rgba($color-white, 0.8);
+      font-size: 2rem;
+      text-align: center;
+      margin-top: 10rem;
+
+      @include respond(tab-land) {
+        margin-top: 0rem;
+      }
+    }
+  }
+
+  &__additionalData {
+    height: 65rem;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(tab-land) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: auto;
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__polarChart {
+    width: 35%;
+    transform: translateX(12rem);
+    //cheight: 30%;
+
+    @include respond(tab-land) {
+      width: 70%;
+      transform: translateX(0);
+      margin-bottom: 5rem;
+    }
+
+    @include respond(tab-port) {
+      margin-top: 5rem;
+      width: 80%;
+    }
+  }
+}
