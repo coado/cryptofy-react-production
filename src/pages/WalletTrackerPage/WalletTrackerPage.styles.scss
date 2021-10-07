@@ -146,6 +146,7 @@
 
       @include respond(tab-port) {
         flex-direction: column;
+        justify-content: center;
       }
     }
   }
@@ -187,6 +188,10 @@
       @include respond(tab-port) {
         height: 26rem;
         width: 40rem;
+      }
+
+      @include respond(phone) {
+        width: 35rem;
       }
     }
 

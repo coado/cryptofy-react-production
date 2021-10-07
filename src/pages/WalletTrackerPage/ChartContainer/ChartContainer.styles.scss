@@ -27,8 +27,9 @@
   }
 
   @include respond(tab-port) {
-    width: 40rem;
-    height: 43rem;
+    width: auto;
+    height: auto;
+    margin-right: 0;
   }
 
   h1 {

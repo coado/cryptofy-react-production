@@ -29,8 +29,9 @@
   &__container {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    margin-right: 2rem;
 
     @include respond(tab-port) {
       justify-content: center;
