@@ -27,8 +27,6 @@ const HeaderLogedIn = ({ activeSpinnerLoader, id, setTheme, theme, logout }) => 
     return (
     <div className={`header-${theme} header`}>
         <div className='header__container'>
-            <div className='header__icon'>
-            </div>
             <ul>
                 <li><Link to='/dashboard'> DASHBOARD </Link></li>
                 <li><Link to='/wallet'> WALLET TRACKER </Link></li>

@@ -49,8 +49,11 @@
         font-size: 1.8rem;
         color: inherit;
         font-weight: 700;
-
         transition: all 0.2s;
+
+        &:last-child {
+          margin: 0;
+        }
 
         a {
           color: inherit;
@@ -70,18 +73,11 @@
     }
   }
 
-  &__icon {
-    width: 3rem;
-    height: 3rem;
-    margin-left: 3rem;
-  }
-
   &__themeIcon {
     width: 5.5rem;
     height: 5.5rem;
     display: inline-block;
     padding: 0.5rem;
-    margin-right: 3rem;
     border-radius: 0.3rem;
     transition: all 0.2s;
   }

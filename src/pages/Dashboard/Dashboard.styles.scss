@@ -75,6 +75,14 @@
       @include respond(sm-laptop) {
         font-size: 1.9rem;
       }
+
+      @include respond(tab-port) {
+        font-size: 3rem;
+      }
+
+      @include respond(phone) {
+        font-size: 2rem;
+      }
     }
 
     &--container {
@@ -117,6 +125,15 @@
       @include respond(sm-laptop) {
         font-size: 4.5rem;
         margin-bottom: 2.5rem;
+      }
+
+      @include respond(tab-port) {
+        font-size: 3.5rem;
+        margin-bottom: 4rem;
+      }
+
+      @include respond(phone) {
+        font-size: 3rem;
       }
     }
   }

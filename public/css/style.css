@@ -143,8 +143,8 @@ body {
         color: inherit;
         font-weight: 700;
         transition: all 0.2s; }
-        .header__container ul li:last-of-type {
-          margin-right: 5rem; }
+        .header__container ul li:last-child {
+          margin: 0; }
         .header__container ul li a {
           color: inherit;
           text-decoration: none;
@@ -155,16 +155,11 @@ body {
               font-size: 1.3rem; } }
           .header__container ul li a:hover {
             border-bottom: 3px solid #ffffff; }
-  .header__icon {
-    width: 3rem;
-    height: 3rem;
-    margin-left: 3rem; }
   .header__themeIcon {
     width: 5.5rem;
     height: 5.5rem;
     display: inline-block;
     padding: 0.5rem;
-    margin-right: 3rem;
     border-radius: 0.3rem;
     transition: all 0.2s; }
   .header__themeIcon-space {
@@ -1469,7 +1464,7 @@ body {
     background: linear-gradient(to right bottom, #ffffff, #fdfdfd, #fbfafa, #f9f8f8, #f6f6f5);
     color: #b217ff; }
   .dashboard__cardContainer {
-    width: 95%;
+    width: 94%;
     display: flex;
     justify-content: space-around;
     padding: 2rem; }
@@ -1496,7 +1491,7 @@ body {
         width: 50rem; } }
     @media only screen and (max-width: 37.5em) {
       .dashboard__card {
-        width: 40rem;
+        width: 35rem;
         margin-top: 8rem; } }
     .dashboard__card--header {
       color: inherit;
@@ -1507,6 +1502,12 @@ body {
       @media only screen and (max-width: 87.5em) {
         .dashboard__card--header {
           font-size: 1.9rem; } }
+      @media only screen and (max-width: 56.25em) {
+        .dashboard__card--header {
+          font-size: 3rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .dashboard__card--header {
+          font-size: 2rem; } }
     .dashboard__card--container {
       perspective: 100rem; }
     .dashboard__card--value {
@@ -1531,6 +1532,13 @@ body {
         .dashboard__card--value {
           font-size: 4.5rem;
           margin-bottom: 2.5rem; } }
+      @media only screen and (max-width: 56.25em) {
+        .dashboard__card--value {
+          font-size: 3.5rem;
+          margin-bottom: 4rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .dashboard__card--value {
+          font-size: 3rem; } }
   .dashboard__percentageWalletChange {
     display: flex; }
     @media only screen and (max-width: 37.5em) {
