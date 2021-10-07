@@ -924,8 +924,8 @@ body {
       height: 38rem; } }
   @media only screen and (max-width: 56.25em) {
     .chartContainer {
-      width: auto;
-      height: auto;
+      width: 30rem;
+      height: 35rem;
       margin-right: 0; } }
   .chartContainer h1 {
     font-size: 1.5rem;
@@ -1841,7 +1841,7 @@ body {
 .Homepage {
   background-image: linear-gradient(to right top, #5c196b, #64147d, #6b0f91, #7008a5, #7302bb, #6314ba, #511db8, #3d23b6, #172698, #002479, #001e58, #011638);
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   position: absolute;
   font-family: 'Josefin Sans', sans-serif; }
   .Homepage__wrapper {
@@ -1871,8 +1871,8 @@ body {
         animation: rolling 2.5s ease-out 1s infinite; }
         @media only screen and (max-width: 37.5em) {
           .Homepage__header--imageWrapper img {
-            width: 8rem;
-            height: 8rem; } }
+            width: 6rem;
+            height: 6rem; } }
   .Homepage__title {
     color: white;
     font-size: 8.5rem;
@@ -1883,7 +1883,7 @@ body {
         font-size: 7rem; } }
     @media only screen and (max-width: 37.5em) {
       .Homepage__title {
-        font-size: 6rem; } }
+        font-size: 5rem; } }
   .Homepage__slogan {
     color: #ffffff;
     font-size: 7.5rem;
@@ -1893,7 +1893,7 @@ body {
         font-size: 6rem; } }
     @media only screen and (max-width: 37.5em) {
       .Homepage__slogan {
-        font-size: 5rem;
+        font-size: 4.5rem;
         line-height: 6.5rem; } }
   .Homepage__button {
     color: #ffffff;

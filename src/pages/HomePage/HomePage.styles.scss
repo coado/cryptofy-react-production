@@ -1,7 +1,7 @@
 .Homepage {
   background-image: $space-background;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   position: absolute;
   font-family: 'Josefin Sans', sans-serif;
 
@@ -40,8 +40,8 @@
         animation: rolling 2.5s ease-out 1s infinite;
 
         @include respond(phone) {
-          width: 8rem;
-          height: 8rem;
+          width: 6rem;
+          height: 6rem;
         }
       }
     }
@@ -58,7 +58,7 @@
     }
 
     @include respond(phone) {
-      font-size: 6rem;
+      font-size: 5rem;
     }
   }
 
@@ -72,7 +72,7 @@
     }
 
     @include respond(phone) {
-      font-size: 5rem;
+      font-size: 4.5rem;
       line-height: 6.5rem;
     }
   }
