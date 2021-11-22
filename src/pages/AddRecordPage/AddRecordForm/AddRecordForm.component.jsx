@@ -94,8 +94,11 @@ return (
                         <datalist id="types">
                             <option value="Trade" />
                             <option value="Deposit" />
-                            <option value="Withdrawal" />
-                            <option value="Mining" />
+                            {
+                                // <option value="Withdrawal" />
+                                // <option value="Mining" />
+
+                            }
                         </datalist>
                     <CurrenciesList />
                         

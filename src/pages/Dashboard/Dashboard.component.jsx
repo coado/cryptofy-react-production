@@ -90,8 +90,12 @@ const Dashboard = ({ theme, totalValue, profit, percentageWalletChange, chartDat
                             <Wallet className='dashboard__wallet--wallet'/>
                         </div>
                         <div onClick={recalcData} className='dashboard__wallet--recalcWrapper'>
-                            <RefreshIcon className='dashboard__wallet--recalcIcon' />
-                            <span className='dashboard__wallet--recalcSpan'> Recalculate data </span>
+                            {
+                                // RECALCULATE LOGIC -- TODO ------------------------------------------------
+                                // <RefreshIcon className='dashboard__wallet--recalcIcon' />
+                                // <span className='dashboard__wallet--recalcSpan'> Recalculate data </span>
+
+                            }
                         </div>
                     </div>
                     <WalletTable theme={theme} wallet={wallet} />

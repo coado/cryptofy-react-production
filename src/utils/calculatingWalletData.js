@@ -243,7 +243,7 @@ import fetchingData from './fetchingData';
     const chartDataJSON = await fetchChartData.json();
     const chartData = chartDataJSON.prices.slice(24,);
     const chartMarketCapsData = chartDataJSON.market_caps.slice(24,);
-    const chartValues = chartData.map(el => (Math.round(el[1] * 100)) / 100);
+    const chartValues = chartData.map(el => el[1] >= 1 ? (Math.round(el[1] * 100)) / 100 : (Math.round(el[1] * 10000)) / 10000)
     const chartMarketCapValues = chartMarketCapsData.map(el => (Math.round(el[1] * 100)) / 100) 
     const chartTimes = chartData.map(el => {
         let hours = String((new Date(el[0])).getHours());

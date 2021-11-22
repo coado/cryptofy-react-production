@@ -66,7 +66,7 @@ return (
                     ticks: {
                         
                         callback: function(value, index, values) {
-                            return (Math.round(value*100) / 100) + tickMark
+                            return value >= 1 ? (Math.round(value*100) / 100) + tickMark : (Math.round(value*10000) / 10000) + tickMark
                         },
                         color: themeTicksColor,
                         
